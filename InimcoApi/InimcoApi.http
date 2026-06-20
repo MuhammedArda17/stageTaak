@@ -1,0 +1,6 @@
+@InimcoApi_HostAddress = http://localhost:5190
+
+GET {{InimcoApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

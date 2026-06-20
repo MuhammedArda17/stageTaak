@@ -1,0 +1,48 @@
+[
+  {
+    "FirstName": "John",
+    "LastName": "Doe",
+    "SocialSkills": [
+      "social",
+      "fun",
+      "coach"
+    ],
+    "SocialAccounts": [
+      {
+        "Type": "Twitter",
+        "Address": "@JohnDoe"
+      },
+      {
+        "Type": "LinkedIn",
+        "Address": "linkedin.com/johndoe"
+      }
+    ]
+  },
+  {
+    "FirstName": "Adra",
+    "LastName": "Gurkan",
+    "SocialSkills": [
+      "Voetbal",
+      "tennis"
+    ],
+    "SocialAccounts": [
+      {
+        "Type": "facebook",
+        "Address": "hamid"
+      }
+    ]
+  },
+  {
+    "FirstName": "Muhammed",
+    "LastName": "Gurkan",
+    "SocialSkills": [
+      "voetbal"
+    ],
+    "SocialAccounts": [
+      {
+        "Type": "twitter",
+        "Address": "xlxlx"
+      }
+    ]
+  }
+]
