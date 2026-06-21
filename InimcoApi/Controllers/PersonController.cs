@@ -18,12 +18,11 @@ public class PersonController : ControllerBase
         _personRepository = new PersonRepository();
     }
 
-    // POST api/person
     [HttpPost]
     public IActionResult Post([FromBody] Person person)
     {
         if (string.IsNullOrWhiteSpace(person.FirstName) || string.IsNullOrWhiteSpace(person.LastName))
-            return BadRequest("Voornaam en achternaam zijn verplicht.");
+            return BadRequest("voornaam en achternaam zijn verplicht.");
 
         _personRepository.Save(person);
         PersonResult result = _personService.BuildResult(person);

@@ -44,5 +44,18 @@
         "Address": "xlxlx"
       }
     ]
+  },
+  {
+    "FirstName": "Arda",
+    "LastName": "Gurkan",
+    "SocialSkills": [
+      "Voetbal"
+    ],
+    "SocialAccounts": [
+      {
+        "Type": "Insta",
+        "Address": "ArdaLimo"
+      }
+    ]
   }
 ]

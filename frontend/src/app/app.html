@@ -9,7 +9,9 @@
   <input [(ngModel)]="newSkill" placeholder="Skill toevoegen" />
   <button (click)="addSkill()">Toevoegen</button>
   <ul>
-    <li *ngFor="let skill of person.socialSkills">{{ skill }}</li>
+    @for (skill of person.socialSkills; track skill) {
+      <li>{{ skill }}</li>
+    }
   </ul>
 
   <h3>Social Accounts</h3>
@@ -17,19 +19,23 @@
   <input [(ngModel)]="newAccount.address" placeholder="Adres" />
   <button (click)="addAccount()">Toevoegen</button>
   <ul>
-    <li *ngFor="let account of person.socialAccounts">{{ account.type }}: {{ account.address }}</li>
+    @for (account of person.socialAccounts; track account.type) {
+      <li>{{ account.type }}: {{ account.address }}</li>
+    }
   </ul>
 
   <br>
   <button (click)="submit()">Versturen</button>
 
-  <div *ngIf="result">
-    <h3>Resultaat</h3>
-    <p>Aantal klinkers: {{ result.vowelCount }}</p>
-    <p>Aantal medeklinkers: {{ result.consonantCount }}</p>
-    <p>Volledige naam: {{ result.fullName }}</p>
-    <p>Omgekeerde naam: {{ result.reversedName }}</p>
-    <h4>JSON:</h4>
-    <pre>{{ result.person | json }}</pre>
-  </div>
+  @if (result) {
+    <div>
+      <h3>Resultaat</h3>
+      <p>Aantal klinkers: {{ result.vowelCount }}</p>
+      <p>Aantal medeklinkers: {{ result.consonantCount }}</p>
+      <p>Volledige naam: {{ result.fullName }}</p>
+      <p>Omgekeerde naam: {{ result.reversedName }}</p>
+      <h4>JSON:</h4>
+      <pre>{{ result.person | json }}</pre>
+    </div>
+  }
 </div>

@@ -7,7 +7,6 @@ public class PersonRepository
 {
     private readonly string _filePath = "persons.json";
 
-    // Slaat een persoon op in een JSON bestand
     public void Save(Person person)
     {
         List<Person> persons = GetAll();
@@ -20,7 +19,6 @@ public class PersonRepository
         File.WriteAllText(_filePath, json);
     }
 
-    // Haalt alle personen op uit het JSON bestand
     public List<Person> GetAll()
     {
         if (!File.Exists(_filePath))
